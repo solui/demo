@@ -14,7 +14,7 @@ npx truffle unbox solui/demo
 cd demo
 ```
 
-Start the devnet:
+In a separate terminal start the devnet:
 
 ```shell
 yarn ganache-cli
