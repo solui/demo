@@ -5,7 +5,7 @@
   ],
   "commands": {
     "Compile contracts": "truffle compile",
-    "Migrate contracts": "truffle migrate",
+    "Migrate contracts": "truffle migrate"
   },
   "hooks": {
     "post-unpack": "npm install"

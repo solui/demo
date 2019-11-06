@@ -2,16 +2,14 @@ This repository contains demo contracts and UI specifications for [solui](https:
 
 ## Usage
 
-Install [Truffle](https://trufflesuite.com) and the solUI CLI:
+Requirements:
 
-```shell
-npm install -g truffle @solui/cli
-```
+  * Node.js 12+
 
 Get this demo and change to the unpacked folder:
 
 ```shell
-truffle unbox solui/demo
+npx truffle unbox solui/demo
 cd demo
 ```
 
@@ -31,5 +29,5 @@ npm run migrate
 Run the demo:
 
 ```shell
-solui view --spec contracts/erc20/ui.json --artifacts build/contracts
+npx solui view --spec contracts/erc20/ui.json --artifacts build/contracts
 ```
