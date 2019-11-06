@@ -1,0 +1,30 @@
+{
+  "name": "@solui/demo",
+  "private": true,
+  "description": "Demo contracts and UIs",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "solhint": "^2.2.0",
+    "ganache-cli": "^6.7.0",
+    "truffle": "^5.0.33"
+  },
+  "scripts": {
+    "lint": "solhint contracts/**/*.sol",
+    "devnet": "ganache-cli -a 10",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solui/demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/solui/demo/issues"
+  },
+  "author": "Ramesh Nair <ram@hiddentao.com>",
+  "homepage": "https://solui.dev"
+}
