@@ -5,12 +5,8 @@
   "version": "1.0.0",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "solhint": "^2.2.0",
     "ganache-cli": "^6.7.0",
     "truffle": "^5.0.33"
-  },
-  "scripts": {
-    "lint": "solhint contracts/**/*.sol",
   },
   "publishConfig": {
     "access": "public"
