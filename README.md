@@ -5,7 +5,7 @@ This repository contains demo contracts and UI specifications for [solui](https:
 Requirements:
 
   * Node.js 12+
-  * Yarn
+  * Yarn 1.17+
 
 Get this demo and change to the unpacked folder:
 
