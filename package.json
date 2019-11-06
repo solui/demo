@@ -10,10 +10,7 @@
     "truffle": "^5.0.33"
   },
   "scripts": {
-    "lint": "solhint contracts/**/*.sol",
-    "devnet": "ganache-cli -a 10",
-    "compile": "truffle compile",
-    "migrate": "truffle migrate"
+    "lint": "solhint contracts/**/*.sol"
   },
   "publishConfig": {
     "access": "public"

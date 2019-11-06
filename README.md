@@ -5,6 +5,7 @@ This repository contains demo contracts and UI specifications for [solui](https:
 Requirements:
 
   * Node.js 12+
+  * Yarn
 
 Get this demo and change to the unpacked folder:
 
@@ -16,14 +17,14 @@ cd demo
 Start the devnet:
 
 ```shell
-npm run devnet
+yarn ganache-cli
 ```
 
 Compile and migrate the contracts:
 
 ```shell
-npm run compile
-npm run migrate
+yarn truffle compile
+yarn truffle migrate
 ```
 
 Run the demo:
