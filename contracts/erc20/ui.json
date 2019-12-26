@@ -58,18 +58,18 @@
           "type": "deploy",
           "contract": "ERC20",
           "args": {
-            "_name": "name",
-            "_symbol": "symbol",
-            "_initialSupply": "initialSupply"
+            "_name": "@input[name]",
+            "_symbol": "@input[symbol]",
+            "_initialSupply": "@input[initialSupply]"
           },
-          "saveResultAs": "contractAddress"
+          "saveResultAsInput": "contractAddress"
         }
       ],
       "outputs": [
         {
           "title": "New contract address",
           "type": "address",
-          "param": "contractAddress"
+          "value": "@input[contractAddress]"
         }
       ]
     },
@@ -97,40 +97,40 @@
         {
           "type": "call",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "name",
-          "saveResultAs": "tokenName"
+          "saveResultAsInput": "tokenName"
         },
         {
           "type": "call",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "symbol",
-          "saveResultAs": "tokenSymbol"
+          "saveResultAsInput": "tokenSymbol"
         },
         {
           "type": "call",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "totalSupply",
-          "saveResultAs": "tokenSupply"
+          "saveResultAsInput": "tokenSupply"
         }
       ],
       "outputs": [
         {
           "title": "Name",
           "type": "string",
-          "param": "tokenName"
+          "value": "@input[tokenName]"
         },
         {
           "title": "Symbol",
           "type": "string",
-          "param": "tokenSymbol"
+          "value": "@input[tokenSymbol]"
         },
         {
           "title": "Total supply",
           "type": "string",
-          "param": "tokenSupply"
+          "value": "@input[tokenSupply]"
         }
       ]
     },
@@ -180,11 +180,11 @@
         {
           "type": "send",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "approve",
           "args": {
-            "spender": "spender",
-            "amount": "amount"
+            "spender": "@input[spender]",
+            "amount": "@input[amount]"
           }
         }
       ]
@@ -237,11 +237,11 @@
         {
           "type": "send",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "transfer",
           "args": {
-            "recipient": "recipient",
-            "amount": "amount"
+            "recipient": "@input[recipient]",
+            "amount": "@input[amount]"
           }
         }
       ]
@@ -312,12 +312,12 @@
         {
           "type": "send",
           "contract": "ERC20",
-          "address": "contractAddress",
+          "address": "@input[contractAddress]",
           "method": "transferFrom",
           "args": {
-            "sender": "from",
-            "recipient": "to",
-            "amount": "amount"
+            "sender": "@input[from]",
+            "recipient": "@input[to]",
+            "amount": "@input[amount]"
           }
         }
       ]
