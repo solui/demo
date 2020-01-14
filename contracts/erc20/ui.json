@@ -5,7 +5,7 @@
   "description": "Deploy your own ERC-20 token and manage it.",
   "aboutUrl": "https://github.com/solui/demo",
   "image": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Basic_Attention_Token_Icon.svg"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Solidity_logo.svg"
   },
   "panels": [
     {
