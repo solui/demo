@@ -76,8 +76,8 @@
     },
     {
       "id": "view",
-      "title": "View data",
-      "description": "View token details, balances and allowances.",
+      "title": "View token",
+      "description": "View token details.",
       "image": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Info_Simple.svg"
       },
@@ -132,6 +132,58 @@
           "title": "Total supply",
           "type": "string",
           "value": "@input[tokenSupply]"
+        }
+      ]
+    },
+    {
+      "id": "view-balance",
+      "title": "View balance",
+      "description": "View your balance.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Info_Simple.svg"
+      },
+      "inputs": [
+        {
+          "name": "contractAddress",
+          "title": "Token contract address",
+          "type": "address",
+          "validation": [
+            {
+              "type": "allowedTypes",
+              "contract": true
+            }
+          ]
+        },
+        {
+          "name": "account",
+          "title": "Account",
+          "type": "address",
+          "validation": [
+            {
+              "type": "allowedTypes",
+              "contract": true,
+              "eoa": true
+            }
+          ]
+        }
+      ],
+      "execs": [
+        {
+          "type": "call",
+          "contract": "ERC20",
+          "address": "@input[contractAddress]",
+          "method": "balanceOf",
+          "args": {
+            "account": "@input[account]"
+          },
+          "saveResultAsInput": "balance"
+        }
+      ],
+      "outputs": [
+        {
+          "title": "Balance",
+          "type": "string",
+          "value": "@input[balance]"
         }
       ]
     },
