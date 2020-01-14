@@ -6,10 +6,9 @@ Requirements:
 
   * Node.js 12+
 
-Get this demo and change to the unpacked folder:
+Clone this repository and change to the unpacked folder:
 
 ```shell
-npx truffle unbox solui/demo
 cd demo
 ```
 
