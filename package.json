@@ -11,6 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "devnet": "ganache-cli"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/solui/demo.git"

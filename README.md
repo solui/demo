@@ -15,14 +15,14 @@ cd demo
 In a separate terminal start the devnet:
 
 ```shell
-npm run ganache-cli
+npm run devnet
 ```
 
 Compile and migrate the contracts:
 
 ```shell
-npm run truffle compile
-npm run truffle migrate
+npm run compile
+npm run migrate
 ```
 
 Run the demo:

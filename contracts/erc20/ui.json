@@ -24,7 +24,7 @@
             {
               "type": "length",
               "min": "5",
-              "max": "100"
+              "max": "40"
             }
           ]
         },
@@ -43,8 +43,9 @@
         {
           "name": "initialSupply",
           "title": "Initial no. of tokens",
-          "type": "uint",
-          "unit": "eth",
+          "type": "int",
+          "unit": "Token",
+          "scale": "18",
           "validation": [
             {
               "type": "range",
@@ -221,8 +222,9 @@
         {
           "name": "amount",
           "title": "Amount",
-          "type": "uint",
-          "unit": "eth",
+          "type": "int",
+          "unit": "Token",
+          "scale": "18",
           "validation": [
             {
               "type": "range",
@@ -271,15 +273,17 @@
           "validation": [
             {
               "type": "allowedTypes",
-              "eoa": true
+              "eoa": true,
+              "contract": true
             }
           ]
         },
         {
           "name": "amount",
           "title": "Amount to send",
-          "type": "uint",
-          "unit": "eth",
+          "type": "int",
+          "unit": "Token",
+          "scale": "18",
           "validation": [
             {
               "type": "range",
@@ -353,8 +357,9 @@
         {
           "name": "amount",
           "title": "Amount to send",
-          "type": "uint",
-          "unit": "eth",
+          "type": "int",
+          "unit": "Token",
+          "scale": "18",
           "validation": [
             {
               "type": "range",
