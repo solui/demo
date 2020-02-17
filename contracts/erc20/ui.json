@@ -44,7 +44,7 @@
           "name": "initialSupply",
           "title": "Initial no. of tokens",
           "type": "int",
-          "unit": "Token",
+          "unit": "Tokens",
           "scale": "18",
           "validation": [
             {
@@ -131,7 +131,9 @@
         },
         {
           "title": "Total supply",
-          "type": "string",
+          "type": "int",
+          "scale": "-18",
+          "unit": "Tokens",
           "value": "@input[tokenSupply]"
         }
       ]
@@ -139,7 +141,7 @@
     {
       "id": "view-balance",
       "title": "View balance",
-      "description": "View your balance.",
+      "description": "View balance.",
       "image": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Info_Simple.svg"
       },
@@ -158,6 +160,8 @@
         {
           "name": "account",
           "title": "Account",
+          "helpText": "The initial value will be your account address",
+          "initialValue": "@env[account]",
           "type": "address",
           "validation": [
             {
@@ -183,7 +187,9 @@
       "outputs": [
         {
           "title": "Balance",
-          "type": "string",
+          "type": "int",
+          "unit": "Tokens",
+          "scale": "-18",
           "value": "@input[balance]"
         }
       ]
@@ -223,7 +229,7 @@
           "name": "amount",
           "title": "Amount",
           "type": "int",
-          "unit": "Token",
+          "unit": "Tokens",
           "scale": "18",
           "validation": [
             {
@@ -282,7 +288,7 @@
           "name": "amount",
           "title": "Amount to send",
           "type": "int",
-          "unit": "Token",
+          "unit": "Tokens",
           "scale": "18",
           "validation": [
             {
@@ -358,7 +364,7 @@
           "name": "amount",
           "title": "Amount to send",
           "type": "int",
-          "unit": "Token",
+          "unit": "Tokens",
           "scale": "18",
           "validation": [
             {
