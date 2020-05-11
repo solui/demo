@@ -57,6 +57,14 @@ contract ERC20 is IERC20 {
     }
 
     /**
+     * @dev See {IERC20-mint}.
+     */
+    function mint() public payable {
+        numTokens += msg.value;
+        balances[msg.sender] += msg.value;
+    }
+
+    /**
      * @dev See {IERC20-transfer}.
      *
      * Requirements:

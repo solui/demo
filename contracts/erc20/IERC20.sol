@@ -17,6 +17,8 @@ interface IERC20 {
   function allowance(address owner, address spender)
     external view returns (uint256);
 
+  function mint() external payable;
+
   function transfer(address to, uint256 value) external returns (bool);
 
   function approve(address spender, uint256 amount)

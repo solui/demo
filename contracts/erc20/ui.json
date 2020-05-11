@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "production": true,
   "id": "solui-repo-erc20",
   "title": "ERC-20",
   "description": "Deploy your own ERC-20 token and manage it.",
@@ -386,6 +387,50 @@
             "recipient": "@input[to]",
             "amount": "@input[amount]"
           }
+        }
+      ]
+    },
+    {
+      "id": "mint",
+      "title": "Mint tokens",
+      "description": "Mint new tokens and assign them to the caller balance.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/717-money-bag.svg"
+      },
+      "inputs": [
+        {
+          "name": "contractAddress",
+          "title": "Token contract address",
+          "type": "address",
+          "validation": [
+            {
+              "type": "allowedTypes",
+              "contract": true
+            }
+          ]
+        },
+        {
+          "name": "amount",
+          "title": "Amount of ETH",
+          "type": "int",
+          "unit": "Tokens",
+          "scale": "18",
+          "validation": [
+            {
+              "type": "range",
+              "min": "1",
+              "max": "1000000000"
+            }
+          ]
+        }
+      ],
+      "execs": [
+        {
+          "type": "send",
+          "contract": "ERC20",
+          "address": "@input[contractAddress]",
+          "method": "mint",
+          "transferAmount": "@input[amount]"
         }
       ]
     }
