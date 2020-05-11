@@ -413,7 +413,7 @@
           "name": "amount",
           "title": "Amount of ETH",
           "type": "int",
-          "unit": "Tokens",
+          "unit": "ETH",
           "scale": "18",
           "validation": [
             {
